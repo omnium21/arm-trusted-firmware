@@ -74,6 +74,8 @@ unsigned long platform_get_stack(unsigned long mpidr);
 void plat_report_exception(unsigned long);
 int plat_crash_console_init(void);
 int plat_crash_console_putc(int c);
+uint32_t plat_get_timer_value(void);
+void plat_timer_init(void);
 
 /*******************************************************************************
  * Mandatory BL1 functions

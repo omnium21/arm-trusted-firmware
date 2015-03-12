@@ -53,9 +53,11 @@ PLAT_BL_COMMON_SOURCES	:=	drivers/arm/pl011/pl011_console.S		\
 				drivers/io/io_semihosting.c			\
 				drivers/io/io_storage.c				\
 				lib/aarch64/xlat_tables.c			\
+				lib/delay/delay.c				\
 				lib/semihosting/semihosting.c			\
 				lib/semihosting/aarch64/semihosting_call.S	\
 				plat/common/aarch64/plat_common.c		\
+				plat/fvp/fvp_delay.c				\
 				plat/fvp/fvp_io_storage.c
 
 BL1_SOURCES		+=	drivers/arm/cci400/cci400.c			\
