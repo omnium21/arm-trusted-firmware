@@ -36,6 +36,7 @@
 #include <debug.h>
 #include <platform.h>
 #include <platform_def.h>
+#include <timer.h>
 #include "bl1_private.h"
 
 /*******************************************************************************
@@ -111,6 +112,10 @@ void bl1_main(void)
 	NOTICE(FIRMWARE_WELCOME_STR);
 	NOTICE("BL1: %s\n", version_string);
 	NOTICE("BL1: %s\n", build_message);
+
+	timer_init();
+	mdelay(100);
+	udelay(200);
 
 	INFO("BL1: RAM 0x%lx - 0x%lx\n", BL1_RAM_BASE, BL1_RAM_LIMIT);
 
