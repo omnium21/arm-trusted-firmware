@@ -202,6 +202,7 @@ INCLUDES		+=	-Iinclude/bl31			\
 				-Iinclude/lib			\
 				-Iinclude/lib/aarch64		\
 				-Iinclude/lib/cpus/aarch64	\
+				-Iinclude/lib/timer		\
 				-Iinclude/plat/common		\
 				-Iinclude/stdlib		\
 				-Iinclude/stdlib/sys		\
