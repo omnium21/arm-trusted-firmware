@@ -124,6 +124,7 @@ void bl1_plat_arch_setup(void)
 			      BL1_COHERENT_RAM_LIMIT
 #endif
 			     );
+	fvp_timer_init();
 }
 
 

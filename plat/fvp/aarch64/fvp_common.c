@@ -38,6 +38,8 @@
 #include <platform.h>
 #include <platform_def.h>
 #include <plat_config.h>
+#include <sp804.h>
+#include <timer.h>
 #include <xlat_tables.h>
 #include "../fvp_def.h"
 
@@ -326,6 +328,18 @@ void fvp_gic_init(void)
 		num_sec_irqs);
 }
 
+void fvp_timer_init(void)
+{
+	timer_ops_t ops;
+
+	printf("fvp_timer_init\n");
+
+	ops.init = sp804_init;
+	ops.get_timer_value = sp804_get_timer_value;
+	ops.clkdiv = 234;
+
+	timer_init(ops);
+}
 
 /*******************************************************************************
  * Gets SPSR for BL32 entry
